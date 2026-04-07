@@ -914,3 +914,110 @@ section {
   background-color: var(--color-whatsapp-hover);
   transform: scale(1.05);
 }
+
+/* Acessibilidade e microinterações */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 10px 14px;
+  z-index: 2000;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.skip-link:focus {
+  left: 16px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.trust-note {
+  font-size: 12px;
+  opacity: .78;
+  margin-top: 8px;
+}
+
+.trust-note-footer {
+  opacity: .6;
+  margin-bottom: 40px;
+  color: var(--color-primary-light);
+}
+
+/* Diagnóstico express */
+.diagnostico {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f6fb 100%);
+}
+
+.diagnostico-content {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+@media (min-width: 900px) {
+  .diagnostico-content {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.diagnostico-list {
+  margin-top: var(--spacing-md);
+  padding-left: 18px;
+  color: var(--color-text-secondary);
+}
+
+.diagnostico-list li + li {
+  margin-top: 8px;
+}
+
+.lead-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: grid;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(10, 35, 66, 0.08);
+}
+
+.lead-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-family: var(--font-family);
+  font-size: 15px;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+}
+
+.lead-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.lead-form button {
+  margin-top: 8px;
+}
