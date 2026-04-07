@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme Mol | Advogado Especialista em Direito Previdenciário</title>
     <meta name="description" content="Proteja seus direitos. Conheça Guilherme Mol, advogado especializado em Direito Previdenciário. Atendimento humanizado e sem complicações.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0A2342">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Guilherme Mol | Advogado Especialista em Direito Previdenciário">
@@ -20,6 +22,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
     <!-- NAVBAR -->
     <header class="navbar">
@@ -66,6 +69,7 @@
         </div>
     </header>
 
+    <main id="conteudo">
     <!-- 1. HERO -->
     <section class="hero">
         <div class="container hero-content">
@@ -78,12 +82,49 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         Quero saber se tenho direito
                     </a>
-                    <p style="font-size:12px; opacity:.7; margin-top:8px;">✔ Atendimento direto com advogado &nbsp;✔ Resposta rápida &nbsp;✔ Total sigilo das informações</p>
+                    <p class="trust-note">✔ Atendimento direto com advogado &nbsp;✔ Resposta rápida &nbsp;✔ Total sigilo das informações</p>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="fotos/IMG_5001.jpeg" alt="Dr. Guilherme Mol">
+                <img src="fotos/IMG_5001.jpeg" alt="Dr. Guilherme Mol" fetchpriority="high" decoding="async">
             </div>
+        </div>
+    </section>
+
+
+    <!-- DIAGNÓSTICO EXPRESS -->
+    <section class="diagnostico" id="diagnostico">
+        <div class="container diagnostico-content">
+            <div>
+                <span class="sobre-badge">Diagnóstico em 2 minutos</span>
+                <h2>Descubra agora se seu caso tem chance real de êxito</h2>
+                <p class="body-large">Preencha rapidamente e eu te respondo no WhatsApp com orientação inicial clara e objetiva.</p>
+                <ul class="diagnostico-list">
+                    <li>Sem compromisso e sem custo inicial</li>
+                    <li>Retorno com linguagem simples</li>
+                    <li>Análise feita pelo próprio advogado</li>
+                </ul>
+            </div>
+            <form id="lead-form" class="lead-form" novalidate>
+                <label for="nome">Seu nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Ex.: Maria Silva" required minlength="2">
+
+                <label for="assunto">Assunto principal</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="" selected disabled>Selecione uma opção</option>
+                    <option value="benefício negado pelo INSS">Benefício negado pelo INSS</option>
+                    <option value="aposentadoria">Aposentadoria</option>
+                    <option value="BPC/LOAS">BPC/LOAS</option>
+                    <option value="questão trabalhista">Questão trabalhista</option>
+                    <option value="inventário / direito civil">Inventário / Direito Civil</option>
+                </select>
+
+                <label for="mensagem">Resumo do seu caso</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte em poucas linhas o que aconteceu..." required minlength="10"></textarea>
+
+                <button type="submit" class="btn btn-primary">Quero meu diagnóstico no WhatsApp</button>
+                <p id="lead-feedback" class="text-muted" aria-live="polite"></p>
+            </form>
         </div>
     </section>
 
@@ -125,31 +166,31 @@
             <div class="sobre-carousel" role="region" aria-label="Fotos do escritório">
                 <div class="carousel-track" id="sobreTrack">
                     <div class="carousel-slide">
-                        <img src="fotos/IMG_5003.jpeg" alt="Dr. Guilherme Mol">
+                        <img src="fotos/IMG_5003.jpeg" alt="Dr. Guilherme Mol" loading="lazy" decoding="async">
                     </div>
                     <div class="carousel-slide">
-                        <img src="fotos/IMG_5004.jpeg" alt="Dr. Guilherme Mol">
+                        <img src="fotos/IMG_5004.jpeg" alt="Dr. Guilherme Mol" loading="lazy" decoding="async">
                     </div>
                     <div class="carousel-slide">
-                        <img src="fotos/IMG_5000.JPG" alt="Dr. Guilherme Mol no escritório">
+                        <img src="fotos/IMG_5000.JPG" alt="Dr. Guilherme Mol no escritório" loading="lazy" decoding="async">
                     </div>
                     <div class="carousel-slide">
-                        <img src="fotos/IMG_5002.JPG" alt="Dr. Guilherme Mol trabalhando">
+                        <img src="fotos/IMG_5002.JPG" alt="Dr. Guilherme Mol trabalhando" loading="lazy" decoding="async">
                     </div>
                 </div>
 
-                <button class="carousel-btn carousel-prev" id="sobrePrev" aria-label="Foto anterior">
+                <button type="button" class="carousel-btn carousel-prev" id="sobrePrev" aria-label="Foto anterior">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
                 </button>
-                <button class="carousel-btn carousel-next" id="sobreNext" aria-label="Próxima foto">
+                <button type="button" class="carousel-btn carousel-next" id="sobreNext" aria-label="Próxima foto">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                 </button>
 
                 <div class="carousel-dots" id="sobreDots">
-                    <button class="carousel-dot is-active" aria-label="Foto 1"></button>
-                    <button class="carousel-dot" aria-label="Foto 2"></button>
-                    <button class="carousel-dot" aria-label="Foto 3"></button>
-                    <button class="carousel-dot" aria-label="Foto 4"></button>
+                    <button type="button" class="carousel-dot is-active" aria-label="Foto 1"></button>
+                    <button type="button" class="carousel-dot" aria-label="Foto 2"></button>
+                    <button type="button" class="carousel-dot" aria-label="Foto 3"></button>
+                    <button type="button" class="carousel-dot" aria-label="Foto 4"></button>
                 </div>
             </div>
         </div>
@@ -246,7 +287,7 @@
                     <a id="cta-analise" href="#" class="btn btn-primary" style="font-size: 18px; padding: 20px 40px; border-radius: 12px; width: 100%; max-width: 600px;">
                         Quero uma análise do meu caso
                     </a>
-                    <p style="font-size:12px; opacity:.7; margin-top:8px;">✔ Atendimento direto com advogado &nbsp;✔ Resposta rápida &nbsp;✔ Total sigilo das informações</p>
+                    <p class="trust-note">✔ Atendimento direto com advogado &nbsp;✔ Resposta rápida &nbsp;✔ Total sigilo das informações</p>
                 </div>
             </div>
         </div>
@@ -338,7 +379,7 @@
                     <p class="depoimento-texto">"O INSS havia negado minha aposentadoria por invalidez duas vezes. O Dr. Guilherme analisou meu caso com muita atenção, explicou cada etapa e conseguiu reverter a decisão. Sinto que finalmente fui ouvida."</p>
                     <div class="depoimento-autor">
                         <div class="depoimento-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Maria S.">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Maria S." loading="lazy" decoding="async" referrerpolicy="no-referrer">
                         </div>
                         <div>
                             <strong>Maria S.</strong>
@@ -357,7 +398,7 @@
                     <p class="depoimento-texto">"Perdi meu pai e não sabia por onde começar o inventário. O Dr. Guilherme guiou toda a família de forma clara e tranquila, sem complicar. Resolvemos tudo com segurança jurídica e sem conflitos."</p>
                     <div class="depoimento-autor">
                         <div class="depoimento-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Roberto A.">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Roberto A." loading="lazy" decoding="async" referrerpolicy="no-referrer">
                         </div>
                         <div>
                             <strong>Roberto A.</strong>
@@ -376,7 +417,7 @@
                     <p class="depoimento-texto">"Trabalhei anos sem que meu vínculo fosse registrado corretamente. O Guilherme entrou com o processo trabalhista e conseguiu o reconhecimento do tempo de serviço. Profissional sério, presente e muito humano."</p>
                     <div class="depoimento-autor">
                         <div class="depoimento-avatar">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Carlos M.">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Carlos M." loading="lazy" decoding="async" referrerpolicy="no-referrer">
                         </div>
                         <div>
                             <strong>Carlos M.</strong>
@@ -398,7 +439,7 @@
             </div>
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         O que fazer quando o INSS nega meu benefício?
                         <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -407,7 +448,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         Quanto tempo demora um processo previdenciário?
                         <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -416,7 +457,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         Quais documentos preciso para dar entrada na aposentadoria?
                         <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -425,7 +466,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         Posso ser atendido online, mesmo morando em outra cidade?
                         <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -434,7 +475,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         O que é o BPC/LOAS e quem tem direito?
                         <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -443,7 +484,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         Fui demitido sem justa causa. Tenho algum direito trabalhista pendente?
                         <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
@@ -458,7 +499,7 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     Fale comigo no WhatsApp
                 </a>
-                <p style="font-size:12px; opacity:.7; margin-top:8px;">✔ Atendimento direto com advogado &nbsp;✔ Resposta rápida &nbsp;✔ Total sigilo das informações</p>
+                <p class="trust-note">✔ Atendimento direto com advogado &nbsp;✔ Resposta rápida &nbsp;✔ Total sigilo das informações</p>
             </div>
         </div>
     </section>
@@ -472,6 +513,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- CTA FINAL & FOOTER -->
     <footer class="footer">
         <div class="container footer-content">
@@ -481,7 +524,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 Quero resolver meu caso agora
             </a>
-            <p style="font-size:12px; opacity:.6; margin-bottom: 40px; color: var(--color-primary-light);">✔ Atendimento direto com advogado &nbsp;✔ Resposta rápida &nbsp;✔ Total sigilo das informações</p>
+            <p class="trust-note trust-note-footer">✔ Atendimento direto com advogado &nbsp;✔ Resposta rápida &nbsp;✔ Total sigilo das informações</p>
 
             <div style="width: 100%; height: 1px; background-color: var(--color-primary-light); margin-bottom: 32px;"></div>
 
@@ -509,106 +552,20 @@
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
     </a>
 
-    <script>
-        // WhatsApp contextual messages
-        (function () {
-            const NUM = "5531982868343";
-            function gerarLink(msg) {
-                return "https://wa.me/" + NUM + "?text=" + encodeURIComponent(msg);
-            }
-            var msgs = {
-                "cta-navbar":     "Olá, Dr. Guilherme Mol. Vim pelo seu site e gostaria de entender melhor como posso resolver meu caso.",
-                "cta-mobile-nav": "Olá, Dr. Guilherme Mol. Vim pelo seu site e gostaria de entender melhor como posso resolver meu caso.",
-                "cta-hero":       "Olá, Dr. Guilherme Mol. Vim pelo seu site e gostaria de saber se ainda tenho direito ao meu benefício. Pode me orientar?",
-                "cta-analise":    "Dr. Guilherme Mol, tive um problema com meu benefício e preciso entender se tenho direito. Pode analisar meu caso?",
-                "cta-faq":        "Olá, Dr. Guilherme Mol. Ainda tenho algumas dúvidas e gostaria de falar diretamente com o senhor.",
-                "cta-footer":     "Dr. Guilherme Mol, quero entender minha situação e saber se ainda tenho direito. Pode me orientar?",
-                "cta-fab":        "Olá, Dr. Guilherme Mol. Gostaria de orientação jurídica."
-            };
-            Object.keys(msgs).forEach(function (id) {
-                var el = document.getElementById(id);
-                if (el) el.href = gerarLink(msgs[id]);
-            });
-        })();
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href === '#') return;
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                    const targetPos = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 16;
-                    window.scrollTo({ top: targetPos, behavior: 'smooth' });
-                    closeMobileNav();
-                }
-            });
-        });
-
-        // Mobile menu
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mobileNav = document.getElementById('mobile-nav');
-
-        function closeMobileNav() {
-            hamburgerBtn.classList.remove('is-open');
-            hamburgerBtn.setAttribute('aria-expanded', 'false');
-            mobileNav.classList.remove('is-open');
-            mobileNav.setAttribute('aria-hidden', 'true');
-        }
-
-        hamburgerBtn.addEventListener('click', () => {
-            const isOpen = hamburgerBtn.classList.toggle('is-open');
-            hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
-            mobileNav.classList.toggle('is-open', isOpen);
-            mobileNav.setAttribute('aria-hidden', String(!isOpen));
-        });
-
-        // Carrossel da seção Sobre
-        (function () {
-            const track = document.getElementById('sobreTrack');
-            const dots = document.querySelectorAll('#sobreDots .carousel-dot');
-            const total = dots.length;
-            let current = 0;
-            let timer;
-
-            function goTo(index) {
-                current = (index + total) % total;
-                track.style.transform = `translateX(-${current * 100}%)`;
-                dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
-            }
-
-            document.getElementById('sobrePrev').addEventListener('click', () => { goTo(current - 1); resetTimer(); });
-            document.getElementById('sobreNext').addEventListener('click', () => { goTo(current + 1); resetTimer(); });
-            dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetTimer(); }));
-
-            function resetTimer() {
-                clearInterval(timer);
-                timer = setInterval(() => goTo(current + 1), 4500);
-            }
-
-            resetTimer();
-        })();
-
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const item = btn.closest('.faq-item');
-                const isOpen = item.classList.contains('is-open');
-
-                document.querySelectorAll('.faq-item.is-open').forEach(openItem => {
-                    openItem.classList.remove('is-open');
-                    openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-                });
-
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                    btn.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Guilherme Mol Advocacia",
+      "description": "Advocacia especializada em Direito Previdenciário, Trabalhista, Civil e Penal com atendimento online e presencial.",
+      "areaServed": "Brasil",
+      "sameAs": ["https://instagram.com/adv.guilhermemol94"],
+      "telephone": "+55 31 98286-8343"
+    }
     </script>
+    <script src="script.js" defer></script>
+
+
 
 </body>
 </html>
