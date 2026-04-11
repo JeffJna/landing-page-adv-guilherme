@@ -91,6 +91,43 @@
         </div>
     </section>
 
+
+    <!-- DIAGNÓSTICO EXPRESS -->
+    <section class="diagnostico" id="diagnostico">
+        <div class="container diagnostico-content">
+            <div>
+                <span class="sobre-badge">Diagnóstico em 2 minutos</span>
+                <h2>Descubra agora se seu caso tem chance real de êxito</h2>
+                <p class="body-large">Preencha rapidamente e eu te respondo no WhatsApp com orientação inicial clara e objetiva.</p>
+                <ul class="diagnostico-list">
+                    <li>Sem compromisso e sem custo inicial</li>
+                    <li>Retorno com linguagem simples</li>
+                    <li>Análise feita pelo próprio advogado</li>
+                </ul>
+            </div>
+            <form id="lead-form" class="lead-form" novalidate>
+                <label for="nome">Seu nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Ex.: Maria Silva" required minlength="2">
+
+                <label for="assunto">Assunto principal</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="" selected disabled>Selecione uma opção</option>
+                    <option value="benefício negado pelo INSS">Benefício negado pelo INSS</option>
+                    <option value="aposentadoria">Aposentadoria</option>
+                    <option value="BPC/LOAS">BPC/LOAS</option>
+                    <option value="questão trabalhista">Questão trabalhista</option>
+                    <option value="inventário / direito civil">Inventário / Direito Civil</option>
+                </select>
+
+                <label for="mensagem">Resumo do seu caso</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte em poucas linhas o que aconteceu..." required minlength="10"></textarea>
+
+                <button type="submit" class="btn btn-primary">Quero meu diagnóstico no WhatsApp</button>
+                <p id="lead-feedback" class="text-muted" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
     <!-- BARRA DE NÚMEROS -->
     <div class="stats bg-primary">
         <div class="container">
